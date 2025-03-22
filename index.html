@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thamim's Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header .logo {
+    font-size: 2.5rem;
+    color: #FF6700;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header .logo:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+header nav {
+    display: flex;
+    gap: 2rem;
+}
+
+header nav a {
+    font-size: 1.4rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: #FF6700;
+    color: black;
+}
+
+header nav a.active {
+    background-color: #FF6700;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 3%;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    header .logo {
+        font-size: 2rem;
+    }
+
+    header nav a {
+        font-size: 1.2rem;
+    }
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    padding: 5rem 9%;
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.home-img img {
+    width: 35rem;
+    height: 35rem;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #FF6700;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.home-img img:hover {
+    transform: scale(1.1);
+}
+
+.home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content h1 span {
+    color: #FF6700;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: #FF6700;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #e0e0e0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #FF6700;
+    font-size: 2rem;
+    border-radius: 50%;
+    color: #FF6700;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: black;
+    background-color: #FF6700;
+    transform: scale(1.2) translateY(-5px);
+    box-shadow: 0 0 25px #FF6700;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #FF6700;
+    background-color: black;
+    border: 2px solid #FF6700;
+    border-radius: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #FF6700;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #FF6700;
+}
+
+@media (max-width: 995px) {
+    .home {
+        flex-direction: column;
+        padding: 5rem 4%;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-bottom: 3rem;
+    }
+
+    .home-content h1 {
+        font-size: 4.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 3rem;
+    }
+
+    .btn {
+        padding: 0.8rem 2.5rem;
+        font-size: 1.4rem;
+    }
+}
+
+.about {
+    padding: 5rem 9%;
+    text-align: center;
+    background-color: black;
+}
+
+.about h1 {
+    font-size: 4rem;
+    color: #FF6700;
+    margin-bottom: 4rem;
+}
+
+.about .img2 {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 2rem 0;
+    box-shadow: 0 0 15px #FF6700;
+    transition: transform 0.3s ease;
+}
+
+.about .img2:hover {
+    transform: scale(1.1);
+}
+
+.about p {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+
+.about table {
+    margin: 2rem auto 0;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 50rem;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #161616;
+}
+
+.about table th,
+.about table td {
+    padding: 1rem;
+    border: 1px solid #FF6700;
+    text-align: left;
+}
+
+.about table th {
+    background-color: #FF6700;
+    color: black;
+    text-align: center;
+}
+
+.skills {
+    padding: 5rem 9%;
+    background-color: black;
+}
+
+.skills h1 {
+    font-size: 4rem;
+    color: #FF6700;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.skill-box {
+    background-color: #161616;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 10px #FF6700;
+    width: 30%;
+    min-width: 20rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: scale(1.05);
+}
+
+.skill-box h2 {
+    font-size: 2.4rem;
+    color: #FF6700;
+    margin-bottom: 2rem;
+}
+
+.skill-box div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    color: #e0e0e0;
+}
+
+progress {
+    width: 60%;
+    height: 1.5rem;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #3a3a3a;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #3a3a3a;
+    border-radius: 1rem;
+}
+
+progress::-webkit-progress-value {
+    background-color: #FF6700;
+    border-radius: 1rem;
+}
+
+progress::-moz-progress-bar {
+    background-color: #FF6700;
+    border-radius: 1rem;
+}
+
+.skill-box ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    text-align: left;
+}
+
+.skill-box ul li {
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+    color: #e0e0e0;
+}
+
+.projects {
+    background-color: black;
+    padding: 5rem 9%;
+    text-align: center;
+}
+
+.projects h1 {
+    font-size: 4rem;
+    color: #FF6700;
+    margin-bottom: 2rem;
+}
+
+.projects .project {
+    display: inline-block;
+    background-color: #161616;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin: 2rem;
+    box-shadow: 0 0 15px #FF6700;
+    width: 20rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects .project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #FF6700;
+}
+
+.projects .project img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.projects .project h3 {
+    font-size: 2rem;
+    color: #FF6700;
+    margin-bottom: 1rem;
+}
+
+.projects .project p {
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.projects .project a {
+    font-size: 1.4rem;
+    color: black;
+    background-color: #FF6700;
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.projects .project a:hover {
+    background-color: #b74b4b;
+    color: white;
+}
+
+.services {
+    background-color: black;
+    padding: 5rem 9%;
+    text-align: center;
+}
+
+.services h1 {
+    font-size: 4rem;
+    color: #FF6700;
+    margin-bottom: 3rem;
+}
+
+.service-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #161616;
+    margin: 2.5rem auto;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 15px #FF6700;
+    max-width: 85%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #FF6700;
+}
+
+.service-box img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-right: 2rem;
+}
+
+.service-box h2 {
+    font-size: 2.5rem;
+    color: #FF6700;
+    margin-bottom: 1rem;
+}
+
+.service-box p {
+    font-size: 1.4rem;
+    color: white;
+    line-height: 2rem;
+}
+
+.service-box .extra-content {
+    margin-top: 1.5rem;
+}
+
+.service-box .extra-content a {
+    font-size: 1.2rem;
+    color: black;
+    background-color: #FF6700;
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.service-box .extra-content a:hover {
+    background-color: #b74b4b;
+    color: white;
+}
+
+.contact {
+    background-color: black;
+    color: white;
+    padding: 5rem 9%;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 4rem;
+    color: #FF6700;
+    margin-bottom: 1.5rem;
+}
+
+.contact p {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+    color: #d4d4d4;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #161616;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(255, 103, 0, 0.3);
+}
+
+.contact .form-group {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.contact label {
+    display: block;
+    font-size: 1.4rem;
+    color: #FF6700;
+    margin-bottom: 0.5rem;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #252525;
+    color: white;
+    outline: none;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+    color: #9e9e9e;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    box-shadow: 0 0 10px #FF6700;
+}
+
+.contact button {
+    display: inline-block;
+    background-color: #FF6700;
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #b74b4b;
+    color: white;
+    transform: scale(1.05);
+}
+
+.hire-me {
+    background-color: black;
+    color: white;
+    padding: 5rem 9%;
+    text-align: center;
+}
+
+.hire-me h1 {
+    font-size: 4rem;
+    color: #FF6700;
+    margin-bottom: 1.5rem;
+}
+
+.hire-me p {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+    color: #d4d4d4;
+}
+
+.hire-me form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #161616;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(255, 103, 0, 0.3);
+}
+
+.hire-me .form-group {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.hire-me label {
+    display: block;
+    font-size: 1.4rem;
+    color: #FF6700;
+    margin-bottom: 0.5rem;
+}
+
+.hire-me input,
+.hire-me textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #252525;
+    color: white;
+    outline: none;
+}
+
+.hire-me input::placeholder,
+.hire-me textarea::placeholder {
+    color: #9e9e9e;
+}
+
+.hire-me input:focus,
+.hire-me textarea:focus {
+    box-shadow: 0 0 10px #FF6700;
+}
+
+.hire-me button {
+    display: inline-block;
+    background-color: #FF6700;
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hire-me button:hover {
+    background-color: #b74b4b;
+    color: white;
+    transform: scale(1.05);
+}
+
+.hire-me .contact-info {
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    color: #d4d4d4;
+}
+
+.hire-me .contact-info a {
+    color: #FF6700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hire-me .contact-info a:hover {
+    color: #b74b4b;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 4rem 9%;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer-box {
+    flex: 1 1 30%;
+    text-align: left;
+}
+
+.footer-box h2 {
+    font-size: 2rem;
+    color: #FF6700;
+    margin-bottom: 1rem;
+}
+
+.footer-box p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #d4d4d4;
+}
+
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-box ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-box ul li a {
+    font-size: 1.4rem;
+    color: #FF6700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-box ul li a:hover {
+    color: #b74b4b;
+}
+
+.social-links {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.social-links a {
+    color: #FF6700;
+    margin: 0 15px;
+    font-size: 2.5rem;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.3) rotate(10deg);
+}
+
+.social-links a:nth-child(1):hover {
+    color: #3b5998;
+}
+
+.social-links a:nth-child(2):hover {
+    color: #1DA1F2;
+}
+
+.social-links a:nth-child(3):hover {
+    color: #0077b5;
+}
+
+.social-links a:nth-child(4):hover {
+    color: #333333;
+}
+
+.social-links i {
+    transition: transform 0.4s ease, color 0.4s ease;
+    will-change: transform;
+}
+
+.footer-bottom {
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    color: #d4d4d4;
+    border-top: 1px solid #333;
+    padding-top: 1.5rem;
+}
+
+
+@keyframes flipIn {
+    from {
+        opacity: 0;
+        transform: rotateY(-90deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateY(0);
+    }
+}
+@keyframes cursor{
+    to{
+        border-left: 3px solid #b74b4b;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Web Developer";
+    }
+    21%, 40%{
+        content: "Developer";
+    }
+    41%, 60%{
+        content: "Web Designer";
+    }
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <a href="#home" class="logo">Thamim</a>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="home-img">
+            <img src="Main1.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Thamim</span></h1>
+            <h3 class="typing-text">I'm a <span>Web developer</span></h3>
+            <p>I am Thaminsudeen, a Computer Science undergraduate with a passion for web development and problem-solving.</p>
+            <div class="social-icons">
+                <a href="https://in.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/thaminsudeen2"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="#hire-me" class="btn">Hire me</a>
+            <a href="Thaminsudeen's Resume.pdf" download="Thaminsudeen's Resume" class="btn">Download My Resume</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h1>About Me</h1>
+        <img src="Main2.jpg" class="img2">
+        <p>Hi, I'm <span class="highlight">Thaminsudeen</span>, a <span class="highlight">Computer Science UG student</span> passionate about <span class="highlight">web development</span> and <span class="highlight">game development</span>. I love solving problems through coding and logic.</p>
+        <p>My goal is to continuously improve my skills and create innovative projects that make an impact.</p>
+        <h1>More about me</h1>
+        <table>
+            <tr><th>Name</th><td>Thaminsudeen</td></tr>
+            <tr><th>Age</th><td>18</td></tr>
+            <tr><th>D.O.B</th><td>28.07.2006</td></tr>
+            <tr><th>Degree</th><td>Computer Science</td></tr>
+            <tr><th>Address</th><td>62, Subiramaniya Bharathiyar Street, Redhills, Chennai-600052</td></tr>
+            <tr><th>Phone</th><td>9345880481</td></tr>
+            <tr><th>Email</th><td>thamimsudeen28@gmail.com</td></tr>
+        </table>
+    </section>
+
+    <!-- Skills Section -->
+<section id="skills" class="skills">
+    <h1>My Skills</h1>
+    <div class="skills-container">
+        <!-- Technical Skills -->
+        <div class="skill-box">
+            <h2>Technical Skills</h2>
+            <div>HTML: <progress value="80" max="100"></progress></div>
+            <div>CSS: <progress value="50" max="100"></progress></div>
+            <div>Java: <progress value="80" max="100"></progress></div>
+            <div>Python: <progress value="70" max="100"></progress></div>
+            <div>MS Office: <progress value="90" max="100"></progress></div>
+        </div>
+
+        <!-- Hard Skills -->
+        <div class="skill-box">
+            <h2>Hard Skills</h2>
+            <div>Communication: <progress value="70" max="100"></progress></div>
+            <div>Problem-Solving: <progress value="70" max="100"></progress></div>
+            <div>Teamwork: <progress value="80" max="100"></progress></div>
+            <div>Leadership: <progress value="60" max="100"></progress></div>
+            <div>Project Management: <progress value="80" max="100"></progress></div>
+        </div>
+
+        <!-- Additional Skills -->
+        <div class="skill-box">
+            <h2>Additional Skills</h2>
+            <h3>Languages</h3>
+            <ul>
+                <li>Tamil</li>
+                <li>English</li>
+                <li>Urdu</li>
+            </ul>
+            <h3>Certifications</h3>
+            <ul>
+                <li>InfoSys Springboard</li>
+                <li>Fundamentals of Web Development</li>
+                <li>Basics of Python</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h1>My Projects</h1>
+        <h1>WILL BE ADDED SOON!!!</h1>
+        <div class="project">
+            <img src="LoginPageimg.png" alt="Login Page">
+            <h3>Login Page</h3>
+            <p>My first simple project - login page using HTML and CSS</p>
+            <a href="LoginPage.html">View Project</a>
+        </div>
+        <div class="project">
+            <img src="E-Commerceimg.png" alt="E-commerce Website">
+            <h3>E-commerce</h3>
+            <p>A modern online store with a cart and product images.</p>
+            <a href="E-commerce.html">View Project</a>
+        </div>
+    </section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+    <h1>My Services</h1>
+
+    <!-- Web Development -->
+    <div class="service-box">
+        <img src="WebDevelopmentImg.jpeg" alt="Web Development">
+        <div>
+            <h2>Web Development</h2>
+            <p>Creating modern, responsive, and user-friendly websites using HTML, CSS, and JavaScript.</p>
+            <div class="extra-content">
+                <a href="#portfolio">View Portfolio</a>
+                <a href="#hire-me">Hire Me</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Development -->
+    <div class="service-box">
+        <img src="GameDevelopmentImg.jpeg" alt="Game Development">
+        <div>
+            <h2>Game Development</h2>
+            <p>Designing interactive games with engaging mechanics and visuals, ensuring an immersive player experience.</p>
+            <div class="extra-content">
+                <a href="#games">Explore Games</a>
+                <a href="#contact">Contact Me</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Problem Solving -->
+    <div class="service-box">
+        <img src="ProblemSolvingImg.jpeg" alt="Problem Solving">
+        <div>
+            <h2>Problem Solving</h2>
+            <p>Solving coding challenges, optimizing algorithms, and handling data structure problems effectively.</p>
+            <div class="extra-content">
+                <a href="#coding-challenges">View Challenges</a>
+                <a href="#hire-me">Collaborate</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <h1>Contact Me</h1>
+    <p>If you have any questions, want to collaborate, or simply want to say hello, feel free to reach out. I’d love to hear from you!</p>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
+
+    <!-- Hire Me Section -->
+<section id="hire-me" class="hire-me">
+    <h1>Hire Me</h1>
+    <p>If you’re looking for a dedicated developer to bring your project to life, you’re in the right place. Let’s collaborate and create something amazing together!</p>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="budget">Budget (Optional)</label>
+            <input type="text" id="budget" name="budget" placeholder="Your budget for the project">
+        </div>
+        <div class="form-group">
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" rows="5" placeholder="Describe your project in detail" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Request</button>
+    </form>
+    <div class="contact-info">
+        <h2>Or Reach Out Directly</h2>
+        <p>Email: <a href="mailto:thamimsudeen28@gmail.com">thamimsudeen28@gmail.com</a></p>
+        <p>Phone: <a href="tel:+9345880481">+9345880481</a></p>
+    </div>
+</section>
+
+</body>
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-box">
+            <h2>About Me</h2>
+            <p>I'm a passionate developer skilled in creating modern websites, engaging games, and solving challenging coding problems. Let's connect and bring your ideas to life!</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-box">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#hire-me">Hire Me</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-box">
+            <h2>Follow Me</h2>
+            <div class="social-links">
+                <a href="https://in.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/thaminsudeen2"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Thaminsudeen | All Rights Reserved</p>
+    </div>
+</footer>
+
+</html>

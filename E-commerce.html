@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="E-commercestyle.css">
+</head>
+<style>
+    /* Reset default styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+header {
+    background-color: #FF6700;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    background: grey;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #FF6700;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #cc5500;
+}
+
+
+.image-pro{
+    height: 150px;
+    width: 150px;
+}
+</style>
+<body>
+    <header>
+        <h1>My E-Shop</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Cart</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="products" >
+        <div class="product">
+            <img src="Cryons.webp" alt="Cryons" class="image-pro">
+            <h3>Cryons</h3>
+            <p>35.00rs</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="Pencil2.webp" alt="Pencil" class="image-pro">
+            <h3>Pencil</h3>
+            <p>20.00rs</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="Book.webp" alt="Book" class="image-pro">
+            <h3>Book</h3>
+            <p>50.00rs</p>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+</body>
+</html>
